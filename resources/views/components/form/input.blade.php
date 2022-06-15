@@ -1,5 +1,6 @@
 @props([
     'id' => null,
+    'type' => 'text',
     'name',
     'label' => null, 
     'value' => '',
@@ -16,7 +17,7 @@
 </x-form.label>
 @endif
 
-<input id="{{ $id }}" name="{{ $name }}" value="{{ old($name, $value) }}" {{ $attributes->class(['form-control', 'is-invalid' => $errors->has($name)]) }}>
+<input type="{{ $type }}" id="{{ $id }}" name="{{ $name }}" value="{{ old($name, $value) }}" {{ $attributes->class(['form-control', 'is-invalid' => $errors->has($name)]) }}>
 
 @error($name)
 <p class="invalid-feedback">{{ $message }}</p>

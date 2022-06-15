@@ -14,7 +14,7 @@ class ProductsController extends Controller
 
     public function __construct()
     {
-        // $this->middleware(['auth'])->only(['index', 'create']);
+        $this->middleware(['verified'])->except(['index', 'show']);
     }
 
     /**
