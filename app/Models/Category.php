@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Support\Str;
+use App\Models\Helper\ImageUrlAccessor;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Scopes\MainCategoryScope;
@@ -14,6 +15,7 @@ class Category extends Model
 {
     use HasFactory;
     use SoftDeletes;
+    use ImageUrlAccessor;
 
     protected $fillable = [
         'name', 'slug', 'parent_id', 'description', 'image',

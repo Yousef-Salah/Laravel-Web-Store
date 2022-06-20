@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Support\Str;
+use App\Models\Helper\ImageUrlAccessor;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -12,6 +13,7 @@ class Product extends Model
 {
     use HasFactory;
     use SoftDeletes;
+    use ImageUrlAccessor;
 
     protected $fillable = [
         'name', 'slug', 'description', 'category_id', 'price', 'compare_price', 'cost',
@@ -51,5 +53,14 @@ class Product extends Model
             'out-of-stock' => 'Out of Stock',
             'back-order' => 'Back-Order'
         ];
+    }
+
+    public function getDiscountPercentAttribute()
+    {
+        if(!$this->compare_price) {
+            return 0;
+        }
+
+        return number_format($this->price / $this->compare_price * 100, 1);
     }
 }
