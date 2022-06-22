@@ -10,8 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <link href="apple-touch-icon.png" rel="apple-touch-icon">
-    <link href="favicon.png" rel="icon">
+    <link href="{{ asset('assets/store/apple-touch-icon.png') }}" rel="apple-touch-icon">
+    <link href="{{ asset('assets/store/avicon.png') }}" rel="icon">
     <meta name="author" content="Nghia Minh Luong">
     <meta name="keywords" content="Default Description">
     <meta name="description" content="Default keyword">
@@ -67,9 +67,9 @@
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">USD<i
                                         class="fa fa-angle-down"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#"><img src="images/flag/usa.svg" alt=""> USD</a></li>
-                                    <li><a href="#"><img src="images/flag/singapore.svg" alt=""> SGD</a></li>
-                                    <li><a href="#"><img src="images/flag/japan.svg" alt=""> JPN</a></li>
+                                    <li><a href="#"><img src="{{ asset('assets/store/images/flag/usa.svg') }}" alt=""> USD</a></li>
+                                    <li><a href="#"><img src="{{ asset('assets/store/images/flag/singapore.svg') }}" alt=""> SGD</a></li>
+                                    <li><a href="#"><img src="{{ asset('assets/store/images/flag/japan.svg') }}" alt=""> JPN</a></li>
                                 </ul>
                             </div>
                             <div class="btn-group ps-dropdown"><a class="dropdown-toggle" href="#"
@@ -89,7 +89,7 @@
         <nav class="navigation">
             <div class="container-fluid">
                 <div class="navigation__column left">
-                    <div class="header__logo"><a class="ps-logo" href="index.html"><img src="images/logo.png"
+                    <div class="header__logo"><a class="ps-logo" href="index.html"><img src="{{ asset('assets/store/images/logo.png') }}"
                                 alt=""></a></div>
                 </div>
                 <div class="navigation__column center">
@@ -196,7 +196,7 @@
                             <div class="ps-cart__content">
                                 <div class="ps-cart-item"><a class="ps-cart-item__close" href="#"></a>
                                     <div class="ps-cart-item__thumbnail"><a href="product-detail.html"></a><img
-                                            src="images/cart-preview/1.jpg" alt=""></div>
+                                            src="{{ asset('assets/store/images/cart-preview/1.jpg') }}" alt=""></div>
                                     <div class="ps-cart-item__content"><a class="ps-cart-item__title"
                                             href="product-detail.html">Amazin’ Glazin’</a>
                                         <p><span>Quantity:<i>12</i></span><span>Total:<i>£176</i></span></p>
@@ -204,7 +204,7 @@
                                 </div>
                                 <div class="ps-cart-item"><a class="ps-cart-item__close" href="#"></a>
                                     <div class="ps-cart-item__thumbnail"><a href="product-detail.html"></a><img
-                                            src="images/cart-preview/2.jpg" alt=""></div>
+                                            src="{{ asset('assets/store/images/cart-preview/2.jpg') }}" alt=""></div>
                                     <div class="ps-cart-item__content"><a class="ps-cart-item__title"
                                             href="product-detail.html">The Crusty Croissant</a>
                                         <p><span>Quantity:<i>12</i></span><span>Total:<i>£176</i></span></p>
@@ -212,7 +212,7 @@
                                 </div>
                                 <div class="ps-cart-item"><a class="ps-cart-item__close" href="#"></a>
                                     <div class="ps-cart-item__thumbnail"><a href="product-detail.html"></a><img
-                                            src="images/cart-preview/3.jpg" alt=""></div>
+                                            src="{{ asset('assets/store/images/cart-preview/3.jpg') }}" alt=""></div>
                                     <div class="ps-cart-item__content"><a class="ps-cart-item__title"
                                             href="product-detail.html">The Rolling Pin</a>
                                         <p><span>Quantity:<i>12</i></span><span>Total:<i>£176</i></span></p>
@@ -267,13 +267,13 @@
                 </div>
             </div>
         </div>
-        <div class="ps-footer bg--cover" data-background="images/background/parallax.jpg">
+        <div class="ps-footer bg--cover" data-background="{{ asset('assets/store/images/background/parallax.jpg') }}">
             <div class="ps-footer__content">
                 <div class="ps-container">
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
                             <aside class="ps-widget--footer ps-widget--info">
-                                <header><a class="ps-logo" href="index.html"><img src="images/logo-white.png"
+                                <header><a class="ps-logo" href="index.html"><img src="{{ asset('assets/store/images/logo-white.png') }}"
                                             alt=""></a>
                                     <h3 class="ps-widget__title">Address Office 1</h3>
                                 </header>

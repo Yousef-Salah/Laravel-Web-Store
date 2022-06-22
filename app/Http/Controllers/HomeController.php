@@ -13,6 +13,7 @@ class HomeController extends Controller
     {
         return view('store.home', [
             'latestProducts' => Product::latest()->limit(8)->get(),
+            'topSalesProducts' => Product::inRandomOrder()->limit(8)->get(),
         ]);
     }  
 }
