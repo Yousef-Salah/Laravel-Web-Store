@@ -100,7 +100,7 @@
             </div>
         </div>
     </div>
-    <div class="ps-features pt-80 pb-80 bg--cover" data-background="images/background/parallax.jpg">
+    <div class="ps-features pt-80 pb-80 bg--cover" data-background="{{ asset('assets/store/images/background/parallax.jpg') }}">
         <div class="ps-container">
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 ">
@@ -251,7 +251,7 @@
             </div>
         </div>
     </div>
-    <div class="ps-home-testimonial bg--parallax pb-80" data-background="images/background/parallax.jpg">
+    <div class="ps-home-testimonial bg--parallax pb-80" data-background="{{ asset('assets/store/images/background/parallax.jpg') }}">
         <div class="container">
             <div class="owl-slider" data-owl-auto="true" data-owl-loop="true" data-owl-speed="5000" data-owl-gap="0" data-owl-nav="false" data-owl-dots="true" data-owl-item="1" data-owl-item-xs="1" data-owl-item-sm="1" data-owl-item-md="1" data-owl-item-lg="1" data-owl-duration="1000" data-owl-mousedrag="on" data-owl-animate-in="fadeIn" data-owl-animate-out="fadeOut">
                 <div class="ps-testimonial">

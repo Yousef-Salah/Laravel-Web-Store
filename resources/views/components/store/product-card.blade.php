@@ -21,10 +21,10 @@
             <div class="ps-shoe__content">
                 <div class="ps-shoe__variants">
                     <div class="ps-shoe__variant normal">
-                        <img src="images/access/1.jpg" alt="">
-                        <img src="images/access/2.jpg" alt="">
-                        <img src="images/access/3.jpg" alt="">
-                        <img src="images/access/4.jpg" alt="">
+                        <img src="{{ asset('assets/store/images/access/1.jpg') }}" alt="">
+                        <img src="{{ asset('assets/store/images/access/2.jpg') }}" alt="">
+                        <img src="{{ asset('assets/store/images/access/3.jpg') }}" alt="">
+                        <img src="{{ asset('assets/store/images/access/4.jpg') }}" alt="">
                     </div>
                     <select class="ps-rating ps-shoe__rating">
                         <option value="1">1</option>
