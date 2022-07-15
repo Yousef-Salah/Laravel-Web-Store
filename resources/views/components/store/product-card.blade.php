@@ -38,9 +38,9 @@
                         <a href="{{ route('products', $product->category->slug) }}">{{ $product->category->name }}</a>
                     </p><span class="ps-shoe__price">
                         @if($product->compare_price)
-                        <del>{{ $product->compare_price }}</del>
+                        <del>{{ Money::format($product->compare_price) }}</del>
                         @endif
-                        ${{ $product->price }}</span>
+                        {{ Money::format($product->price) }}</span>
                 </div>
             </div>
         </div>

@@ -1,3 +1,20 @@
 where('slug', '=', $slug)
 where('slug', $slug)
 whrerSlug($slug)
+
+Laravel Librarie =>
+
+[1] symfony/intl => [
+    'Language and Script Names',
+    'Country Names',
+    'Locales',
+    'Currencies',
+    'Timezones'
+];
+
+
+
+
+php {Librarie/packages/classes} => 
+
+[1] number Formatter

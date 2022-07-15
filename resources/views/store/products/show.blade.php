@@ -56,10 +56,11 @@
                         <p class="ps-product__category">
                             <a href="{{ route('products', $category->slug) }}"> {{ $category->name }}</a>
                         </p>
-                        <h3 class="ps-product__price">$ {{ $product->price }} 
+                        <h3 class="ps-product__price">{{ Money::format($product->price) }} 
                             @if($product->compare_price)
-                                <del>$ {{ $product->compare_price }}</del> 
-                            @endif</h3>
+                                <del>{{ Money::format($product->compare_price) }}</del> 
+                            @endif
+                        </h3>
                         <div class="ps-product__block ps-product__quickview">
                             <h4>QUICK REVIEW</h4>
                             <p>{{ Str::words($product->description, 10)}}</p>
