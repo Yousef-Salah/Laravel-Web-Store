@@ -45,6 +45,14 @@ class Category extends Model
         });
     }
 
+    //Relations
+    // One-To-Many: One Category Has Many Products
+    public function products()
+    {
+        return $this->hasMany(Product::class, 'category_id', 'id');
+        // return $this->hasAppended(Product::class);
+    }
+
     public function scopeSearch(Builder $builder, $value)
     {
         if ($value) {

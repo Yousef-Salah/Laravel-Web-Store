@@ -20,9 +20,13 @@ class Product extends Model
         'quantity', 'availability', 'status', 'image', 'sku', 'barcode'
     ];
 
+    // protected $with = [  // get the realtion every time with any form of query. 
+    //     'category'
+    // ];
+
     protected static function booted()
     {
-        /*
+        /*  Model Events =>
         creating, created, updating, updated, saving, saved
         deleting, deleted, restoring, resotred, forceDeleting, forceDeleted
         */
@@ -35,6 +39,14 @@ class Product extends Model
         static::saving(function($product) {
             $product->slug = Str::slug($product->name);
         });
+    }
+
+    // Inverse One-To-Many
+    // Product belongs to Category
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'category_id', 'id');
+        // return $this->belongsTo(Category::class);
     }
 
     public static function statusOptions()

@@ -1,0 +1,3 @@
+where('slug', '=', $slug)
+where('slug', $slug)
+whrerSlug($slug)

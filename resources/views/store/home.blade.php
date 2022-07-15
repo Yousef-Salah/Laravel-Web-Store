@@ -92,7 +92,11 @@
                         {{-- $loog->iteration/index/first--}}
 
                         @foreach($latestProducts as $product)
-                            <x-store.product-card :product="$product" :newLabel="$loop->first"  />
+                        <div class="grid-item kids">
+                            <div class="grid-item__content-wrapper">
+                                <x-store.product-card :product="$product" :newLabel="$loop->first"  />
+                            </div>
+                        </div>
                         @endforeach
 
                     </div>
@@ -177,7 +181,11 @@
                     </div>
                     @foreach($topSalesProducts as $product)
                     <div class="ps-shoes--carousel">
-                        <x-store.product-card :product="$product" :newLabel="$loop->first"  />
+                        <div class="grid-item kids">
+                            <div class="grid-item__content-wrapper">
+                                <x-store.product-card :product="$product" :newLabel="$loop->first"  />
+                            </div>
+                         </div>
                     </div>
                     @endforeach
                 </div>
