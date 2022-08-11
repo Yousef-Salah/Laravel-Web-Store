@@ -49,6 +49,19 @@ class Product extends Model
         // return $this->belongsTo(Category::class);
     }
 
+    // Product has many tags
+    public function tags()
+    {
+        return $this->belongsToMany(
+            Tag::class,      // Related Model
+            'product_tag',   // Pivot Table Name
+            'product_id',    // Current model Fk in Pivot Table   
+            'tag_id',        // Related Model FK in Pivot Table
+            'id',            // Local Primary key in Current Model
+            'id',             // Local Primary Key in Related Model
+        );
+    }
+
     public static function statusOptions()
     {
         return [
@@ -73,6 +86,6 @@ class Product extends Model
             return 0;
         }
 
-        return number_format($this->price / $this->compare_price * 100, 1);
+        return number_format(($this->compare_prce - $this->price) / $this->compare_price * 100, 1);
     }
 }

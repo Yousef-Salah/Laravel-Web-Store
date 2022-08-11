@@ -18,3 +18,9 @@ Laravel Librarie =>
 php {Librarie/packages/classes} => 
 
 [1] number Formatter
+
+
+Code => 
+
+is_callable($item['route']) ? call_user_func($item['route']) : $item['route']
+fn() => route('dashboard.index')    // arrow function

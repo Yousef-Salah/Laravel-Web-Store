@@ -100,12 +100,16 @@
             <div class="form-group mb-3">
                 <label for="image">Thumbnail</label>
                 <div class="mb-2">
-                    <img id="thumbnail" src="{{ $$product->image_url }}" height="150">
+                    <img id="thumbnail" src="{{ $product->image_url }}" height="150">
                 </div>
                 <input type="file" style="display: none;" id="image" name="image" class="form-control @error('image') is-invalid @enderror">
                 @error('image')
                 <p class="invalid-feedback">{{ $message }}</p>
                 @enderror
+            </div>
+            <div class="form-group mb-3">
+                <x-form.label>Tags</x-form.label>
+                <x-form.textarea name="tags" /> 
             </div>
         </div>
 

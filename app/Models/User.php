@@ -41,4 +41,14 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // user Has only one profile.
+    public function profile()
+    {
+        return $this->hasOne(Profile::class, 'user_id', 'id')
+                    ->withDefault();
+    }
+
+    // hasOne(string $related, string|null $foreignKey = null, string|null $localKey = null)
+    
 }
