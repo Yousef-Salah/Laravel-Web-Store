@@ -21,7 +21,7 @@ class CartMenu extends Component
     public function __construct()
     {
         $this->cart = Cart::with('product')
-                    ->where('cookie_id', app('car.cookie_id'))
+                    ->where('cookie_id', app('cart.cookie_id'))
                     ->orWhere('user_id', Auth::id())->get();
 
         $this->totalPrice = $this->cart->sum(function($item) {
