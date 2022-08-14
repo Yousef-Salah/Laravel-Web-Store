@@ -13,11 +13,14 @@ Laravel Librarie =>
 ];
 
 
-
+jacascript {Librarie/packages/classes} => 
+[1] Data Tables : Table plug-in fo jQuery
+[2] Tagify (#!@#!$!#)
 
 php {Librarie/packages/classes} => 
 
 [1] number Formatter
+[2] Yajra Data Tables 
 
 
 Code => 

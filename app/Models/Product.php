@@ -88,4 +88,26 @@ class Product extends Model
 
         return number_format(($this->compare_prce - $this->price) / $this->compare_price * 100, 1);
     }
+
+    public function getUrlAttribute()
+    {
+        return route('products.show', [$this->category->slug, $this->slug]);
+    }
+
+    public function cartUsers()
+    {
+        return $this->belongsToMany(
+            User::class,
+            'carts',
+            'product_id',
+            'user_id',
+            'id',
+            'id'
+        );
+    }
+
+    public function cart()
+    {
+        return $this->hasMany(Cart::class, 'user_id', 'id');
+    }
 }

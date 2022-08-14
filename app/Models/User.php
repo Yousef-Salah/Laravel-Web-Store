@@ -51,4 +51,15 @@ class User extends Authenticatable implements MustVerifyEmail
 
     // hasOne(string $related, string|null $foreignKey = null, string|null $localKey = null)
     
+    public function cartProducts()
+    {
+        return $this->belongsToMany(
+            Product::class,
+            'carts',
+            'user_id',
+            'product_id',
+            'id',
+            'id'
+        );
+    }
 }
