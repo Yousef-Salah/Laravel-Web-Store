@@ -4,6 +4,8 @@ namespace App\View\Components;
 
 use Stringable;
 use App\Models\Cart;
+use App\Repositories\Cart\CartRepository;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Illuminate\View\Component;
@@ -18,15 +20,13 @@ class CartMenu extends Component
      *
      * @return void
      */
-    public function __construct()
+    public function __construct() // __construct(CartRepository $cart)
     {
-        $this->cart = Cart::with('product')
-                    ->where('cookie_id', app('cart.cookie_id'))
-                    ->orWhere('user_id', Auth::id())->get();
+        $newCart = App::make(CartRepository::class);
 
-        $this->totalPrice = $this->cart->sum(function($item) {
-            return $item->product->price * $item->quantity;
-        });
+        $this->cart = $newCart->all();
+
+        $this->totalPrice = $newCart->total();
     }
 
     /**

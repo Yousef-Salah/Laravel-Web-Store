@@ -2,6 +2,9 @@ where('slug', '=', $slug)
 where('slug', $slug)
 whrerSlug($slug)
 
+Automaticly cashing for components
+delete cashed components => php artisan view:clear
+
 Laravel Librarie =>
 
 [1] symfony/intl => [
