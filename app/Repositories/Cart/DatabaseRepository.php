@@ -24,7 +24,7 @@ class DatabaseRepository implements CartRepository
                     ->where('cookie_id', $this->cookie_id)
                     //->orWhere('user_id', Auth::id())
                     ->when($id, function($query, $id) {
-                        $query->where('user_id', $id);
+                        $query->orWhere('user_id', $id);
                     })
                     ->get();
                     
@@ -74,4 +74,13 @@ class DatabaseRepository implements CartRepository
             return $item->product->price * $item->quantity;
         });
     }
+
+    public function setUserId($id)
+    {
+        Cart::where('cookie_id', $this->cookie_id)
+            ->update([
+                'user_id' => $id
+            ]);
+    }
+    
 }
