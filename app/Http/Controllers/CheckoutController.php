@@ -16,6 +16,6 @@ class CheckoutController extends Controller
 
     public function store(Request $request, CartRepository $cart)
     {
-        
+        event('order.created');   
     }
 }
